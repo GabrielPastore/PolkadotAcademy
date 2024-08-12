@@ -3,7 +3,7 @@
 def factorial(x: int) -> int:
     if x == 1 or x == 0:
         return 1
-    return x * factorial(x-1)
+    return x * factorial(x-1) #Can generate RecursionError
 
 def main():    
     while True: #We can't have factorial of negative integers
