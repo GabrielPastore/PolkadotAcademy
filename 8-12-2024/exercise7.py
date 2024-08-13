@@ -1,13 +1,10 @@
 #Arithmetic mean of a student's grades
 
 def mean(grades: list) -> float:
-    sum = 0
-    L = 0
-    R = len(grades) - 1
+    L = 0; R = len(grades) - 1; sum = 0
     while L < R:
         sum += grades[L] + grades[R]
-        L += 1
-        R -= 1
+        L += 1; R -= 1
     if L == R:
         sum += grades[L]
     return sum / len(grades)
