@@ -11,13 +11,16 @@ def get_user_input() -> int:
             print("\nThat is not an integer. Try again.")
 
 def check_divisors(x: int) -> list:
-    L = 1; R = x-1
+    L = 1; R = int(x** (1/2))
     divisors = list()
     while L < R:
         if x % L == 0:
             divisors.append(L)
+            if x / L != x:
+                divisors.append(x/L)
         if x % R == 0:
             divisors.append(R)
+            divisors.append(x/R)
         R -= 1; L += 1
     if L == R and x % L == 0:
         divisors.append(L)
