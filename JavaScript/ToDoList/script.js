@@ -64,11 +64,9 @@ function updateTasks() {
             let textoTarefa = task.textContent.replace('Remover', '').trim();
             let pontos = parseInt(textoTarefa.match(/\d+/)[0]);
 
-            if (pontos < 9) {
-                pontos += 1;
+            if (pontos < 10) {
+                pontos ++;
                 textoTarefa = textoTarefa.replace(/\d+/, pontos);
-            } else {
-                textoTarefa = textoTarefa.replace(/\d+/, 10);
             }
 
             task.textContent = textoTarefa;
