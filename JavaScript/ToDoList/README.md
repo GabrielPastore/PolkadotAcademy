@@ -1,10 +1,10 @@
-#To-Do List
+# To-Do List
 
-##Resume
+## Resume
 
 In this changes, a 'Urgency' feature was added as a way to gamefy the day to day chores. This was possible through the use of the select tag in Index.html as well as changes in Styles.css to enhance the visuals. 'Urgency' will be increased by 1 upon adding new tasks to the list. If one task has 10 urgency points (the maximum amount allowed) it becomes impossible to add any other task until the one with max Urgency gets completed.
 
-###Index.html
+### Index.html
 
 The changes featured in index.html was the one previously mentioned: the inclusion of the select tag to get the amount of Urgency for the task. The reason select was chosen instead of a input button was to prevent the user from typing letters and breaking the code.
 
@@ -20,7 +20,7 @@ The changes featured in index.html was the one previously mentioned: the inclusi
         <br><br>
 ```
 
-###Style.css
+### Style.css
 
 New lines added to make the html additions look better and match the visuals of previous elements in the program.
 
@@ -48,7 +48,7 @@ select:hover {
 }
 ```
 
-###Script.js
+### Script.js
 
 Two functions were added to the script file to make the new features viable: 'checkUrgency' and 'updateTasks'. The first is used whenever the user clicks the "Adicionar Tarefa" button. The function will check if there's any task on the list with 10 Urgency points and raise an alert telling them to complete it before adding another one. If there isn't any task with max Urgency, then the function will call the 'addTask' function normally (as it would happen before 'checkUrgency' creation). 
 
@@ -102,6 +102,6 @@ function updateTasks() {
 }
 ```
 
-###Problems to solve
+### Problems to solve
 
 Since the way 'updateTasks' works is by finding the first number in the string, the function will modify the task name sent by the user if the input has any numbers inside it. This issue hasn't been solved yet.
